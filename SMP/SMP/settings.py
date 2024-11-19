@@ -116,23 +116,23 @@ WSGI_APPLICATION = 'SMP.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': config('DB_NAME'),       # Replace with your database name
-#         'USER': config('DB_USER'),       # Replace with your database user
-#         'PASSWORD': config('DB_PASSWORD'), # Replace with your database password
-#         'HOST': config('DB_HOST'),       # Replace with your database host, e.g., 'db.example.com'
-#         'PORT': config('DB_PORT',cast=int),       # Replace with your database port, usually '5432'
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME'),       # Replace with your database name
+        'USER': config('DB_USER'),       # Replace with your database user
+        'PASSWORD': config('DB_PASSWORD'), # Replace with your database password
+        'HOST': config('DB_HOST'),       # Replace with your database host, e.g., 'db.example.com'
+        'PORT': config('DB_PORT',cast=int),       # Replace with your database port, usually '5432'
+    }
+}
 
 
 # Password validation
